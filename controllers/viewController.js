@@ -5,7 +5,7 @@ const AppError = require('../utils/appError');
 
 exports.getOverview = catchAsync(async (req, res, next) => {
   const tours = await Tour.find();
-  console.log(tours.length);
+  // console.log(tours.length);
   res.status(200).render('overview', {
     title: 'All Tours',
     tours
